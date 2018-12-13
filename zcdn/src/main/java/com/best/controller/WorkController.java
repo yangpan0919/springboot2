@@ -29,11 +29,11 @@ public class WorkController {
     @Autowired
     private WorkServiceI workService;
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
     public String test(){
 
 
-        return  null;
+        return  "sucess";
     }
     @RequestMapping(value = "/getEmp", method = RequestMethod.GET)
     public Employee getEmp( Long id){

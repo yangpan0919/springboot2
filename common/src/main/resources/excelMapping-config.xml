@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<excel-mapping>
+
+    <!--批量创建用户-->
+    <mapper class="com.zhiren.emp.models.DTO.CreateUserBatchDTO">
+        <relation cname="员工号" cno="1" param="workId" />
+        <relation cname="姓名" cno="2" param="userName" required="true" suffix="_USERNAME" />
+        <relation cname="性别" cno="3" param="gender" required="true" converter-ref="genderConverter" suffix="_SEX" />
+        <relation cname="部门" cno="4" param="deptId" required="true" suffix="_DEPTID"/>
+        <relation cname="岗位" cno="5" param="postId" required="true" suffix="_POSTID"/>
+        <relation cname="身份证号" cno="6" param="identity" required="true" suffix="_IDENTITY"/>
+        <relation cname="公司邮箱" cno="7" param="companyMail" required="true" suffix="_COMPANYMAIL"/>
+        <relation cname="用工性质" cno="8" param="employeeNature" required="true" validator-ref="employeeNature" suffix="_NATURE"/>
+        <relation cname="用工状态" cno="9" param="workStatus" required="true" validator-ref="workStatus" suffix="_STATUS"/>
+        <relation cname="移动电话" cno="10" param="mobilePhone" required="true" validator-ref="phoneValidator" suffix="_PHONE"/>
+    </mapper>
+
+
+
+    <!--validator id="regex1" regex="" class=""/-->
+    <validator id="companyCodeFormat" regex="^[a-zA-Z0-9]{4}$"></validator>
+    <validator id="noNumberFormat" regex="^.*[^\d].*$" />
+    <validator id="rateFormat" regex="^([0-9]+(\.[0-9]+))|([0-9]+(\.[0-9]+\%))|([0-9]+)|([0-9]+\%)$" />
+    <validator id="doubleNumFormat" regex="^[0-9]+(\.[0-9][0-9]?)?$" />
+    <validator id="positiveNumFormat" regex="^[0-9]*$" />
+    <validator id="Num0or1Format" regex="^[01]$" />
+    <validator id="amountFormat" regex="^[1-9]\d{0,8}\.\d{1,2}|0\.\d{1,2}|[1-9]\d{0,8}|[0]$" />
+    <validator id="amountFormat2" regex="^(0)|([1-9]\d*)|(((0\.)|([1-9]\d*\.))\d*)$" />
+    <validator id="durationFormat" regex="^([0-1]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$" />
+    <validator id="verifyConsumerType" regex="^(\s|小额现金贷|大额现金贷|信用卡类|个人消费贷|企业消费贷)$" />
+    <validator id="lengthNoMoreThanTen" regex="^.{0,10}$" />
+    <validator id="lengthNoMoreThanFifty" regex="^.{0,50}$" />
+    <validator id="employeeNature" regex="^0|1$" />
+    <validator id="workStatus" regex="^0|1$" />
+    <validator id="phoneValidator" class="cn.nanmi.csplatform.common.excel.validator.PhoneValidator" />
+
+    <converter id="CasePhaseConverter" class="cn.nanmi.csplatform.common.excel.convertor.CasePhaseConverter"/>
+    <converter id="genderConverter" class="cn.nanmi.csplatform.common.excel.convertor.GenderConverter"/>
+    <converter id="RateConverter" class="cn.nanmi.csplatform.common.excel.convertor.RateConverter"/>
+    <converter id="ExcelGenericConverter" class="cn.nanmi.csplatform.common.excel.convertor.ExcelGenericConverter"/>
+    <converter id="timeConverter" class="cn.nanmi.csplatform.common.excel.convertor.TimeConverter"/>
+    <converter id="dateConverter" class="cn.nanmi.csplatform.common.excel.convertor.DateConverter"/>
+    <converter id="stringDurationConverter" class="cn.nanmi.csplatform.common.excel.convertor.StringDurationConverter"/>
+    <!--<converter id="phoneNumberConverter" class="cn.nanmi.csplatform.common.excel.convertor.PhoneNumberConverter"/>-->
+
+</excel-mapping>
+
+
+
