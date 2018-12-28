@@ -5,6 +5,20 @@ spring:
     check-process-definitions: false
 
 
+    #对于qq邮箱而言 密码指的就是发送方的授权码
+  mail:
+    host: smtp.qq.com
+    username: 455204689@qq.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+
   redis:
 
     host: 192.168.40.201
