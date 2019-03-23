@@ -1,7 +1,7 @@
 package com.best.Lock.redis;
 
 /**
- * Created by liuyang on 2017/4/20.
+ * Created by YP on 2018/4/20.
  */
 public class ThreadA extends Thread {
     private Service service;

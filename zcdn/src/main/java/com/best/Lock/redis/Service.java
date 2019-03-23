@@ -4,7 +4,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * Created by liuyang on 2017/4/20.
+ * Created by YP on 2018/4/20.
  */
 public class Service {
     private static JedisPool pool = null;
