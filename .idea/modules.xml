@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot2.iml" filepath="$PROJECT_DIR$/.idea/springboot2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zcdn/zcdn.iml" filepath="$PROJECT_DIR$/zcdn/zcdn.iml" />
       <module fileurl="file://$PROJECT_DIR$/zcdn/zcdn.iml" filepath="$PROJECT_DIR$/zcdn/zcdn.iml" />
     </modules>
   </component>
